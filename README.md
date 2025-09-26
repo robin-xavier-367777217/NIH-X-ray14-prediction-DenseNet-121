@@ -1,61 +1,72 @@
 # NIH Chest X-ray14 Disease Prediction
 
-A deep learning project to predict 14 common thoracic pathologies from chest X-ray images using a DenseNet-121 model with transfer learning. This project was developed as part of my data science internship.
+A deep learning project to predict 14 common thoracic pathologies from chest X-ray images using a DenseNet-121 model with transfer learning. This project was developed as part of my data science Up-Skilling.
 
 ---
 
 ## 🎯 Project Goal
 
-The main objective of this project was to build and train a multi-label classification model capable of identifying the presence of 14 different diseases from a single chest X-ray, based on the [NIH ChestX-ray14 dataset](https://www.nih.gov/news-events/news-releases/nih-clinical-center-provides-one-largest-publicly-available-chest-x-ray-datasets-scientific-community).
+The main objective was to build and train a multi-label classification model capable of identifying the presence of 14 different diseases from a single chest X-ray, based on the [NIH ChestX-ray14 dataset](https://www.nih.gov/news-events/news-releases/nih-clinical-center-provides-one-largest-publicly-available-chest-x-ray-datasets-scientific-community).
 
 ---
 
 ## 🚀 Technologies Used
 
-* Python
-* PyTorch
-* torchvision
-* Pandas
-* scikit-learn
-* Matplotlib / Seaborn
-* Kaggle (for GPU training)
+- Python
+- PyTorch & torchvision
+- Pandas & scikit-learn
+- Matplotlib & Seaborn
+- Kaggle (for GPU training)
 
 ---
 
 ## 📊 Results
 
-The model was trained in several stages, progressively unfreezing layers of the DenseNet architecture to fine-tune it on the X-ray data. The final performance on the test set, measured by the Area Under the Curve (AUC) for each pathology, is shown below:
+The model was trained in several stages, progressively unfreezing layers of the DenseNet architecture to fine-tune it on the X-ray data. The final performance on the test set, measured by the Area Under the Curve (AUC) for each pathology, is shown below.
 
-*(Here, you should add the `auc_performance_chart.png` image to your folder and it will show up!)*
-![Model Performance Chart](auc_performance_chart.png)
+![Model Performance Chart](./features/xray_predictor/metrics_images/new%20auc%20score.png)
 
 ---
 
 ## ⚙️ How to Use
 
-To use the trained model for prediction on a new X-ray image:
+Follow these steps to set up the project and run predictions.
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-    cd your-repo-name
-    ```
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/robin-xavier-367777217/NIH-X-ray14-prediction-DenseNet-121.git](https://github.com/robin-xavier-367777217/NIH-X-ray14-prediction-DenseNet-121.git)
+cd NIH-X-ray14-prediction-DenseNet-121
+```
 
-2.  **Install dependencies (You can add a `requirements.txt` file later):**
-    ```bash
-    pip install torch torchvision Pillow
-    ```
+### 2. Install Dependencies
+It's highly recommended to use the provided `requirements.txt` file to ensure a consistent environment.
+```bash
+pip install -r requirements.txt
+```
 
-3.  **Run the prediction script:**
-    ```bash
-    python -m features.xray_predictor.predict /path/to/your/xray_image.jpeg
-    ```
+### 3. Run the Prediction Script
+Provide the path to an X-ray image to get a prediction.
+```bash
+python -m features.xray_predictor.predict /path/to/your/xray_image.jpeg
+```
+
+---
+
+## 🔗 Connect with Me
+
+Feel free to reach out or check out my other work!
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/robin-xavier-367777217/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/robin-xavier-367777217)
+[![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/robinxavier4kaggle)
 
 ---
 
 ## 🙏 Acknowledgements
 
-* This project utilizes the NIH ChestX-ray14 dataset. For more details i have written an article about the complete workflow on linkedin https://www.linkedin.com/in/robin-xavier-367777217/
+- This project utilizes the NIH ChestX-ray14 dataset.
+- I have written a detailed article about the complete project workflow on LinkedIn. You can read it here: **[https://www.linkedin.com/in/robin-xavier-367777217/]**
+
 ---
 
 ## ⚠️ Medical Disclaimer
